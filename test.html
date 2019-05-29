@@ -1,0 +1,51 @@
+<html>
+<script src='bower_components/angular/angular.min.js'></script>
+<script src='js/cyo.js'></script>
+<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+<link href="lib/prism.css" rel="stylesheet" />
+<script src="lib/prism.js"></script>
+
+
+<body ng-app="cyo" class='container'>
+    <story>
+        <h1>Choose Your Own Adventure</h1>
+    </story>
+    <story>
+        <h1>Time to decide!</h1>
+        <page start>
+            <p>
+                You're in bed, getting ready to sleep. You hear the window shatter. You...
+            </p>
+            <button choice sword>Grab your sword</button>
+            <button choice bow>Grab your bow</button>
+            <button choice staff>Grab your Staff</button>
+            <button choice wait>You wait to see what happens...</button>
+        </page>
+        <page sword>
+            <p>You pick up your sword.</p>
+            <event picked-sword></event>
+            <button restart>Try something else?</button>
+        </page>
+        <page bow>
+            <p>You pick up your bow and arrows</p>
+            <button restart>Try something else?</button>
+        </page>
+        <page staff>
+            <p>
+                You picked up your staff.
+            </p>
+            <button restart>Try something else?</button>
+        </page>
+        <page wait>
+            <p>
+                You waited but then something jumps and your head is gone.
+            </p>
+            <button restart>Try Again?</button>
+        </page>
+    </story>
+    <story>
+        <h1>Time to defend</h1>
+
+    </story>
+</html>
